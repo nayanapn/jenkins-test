@@ -1,0 +1,8 @@
+node {
+    stage('Build') {
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/nayanapn/jenkins-test']]]).execute()
+    }
+    stage('print') {
+        echo "HIIIIIII, HELLLOOOOOO"
+     }
+}
